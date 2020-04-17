@@ -7,7 +7,7 @@ import sys
 # recursive solution
 
 
-def eating_cookies(n, cache=None):
+def eating_cookies(n):
     if n <= 1:
         return 1
     if n == 2:
@@ -15,6 +15,8 @@ def eating_cookies(n, cache=None):
     else:
         return eating_cookies(n - 1) + eating_cookies(n - 2) + eating_cookies(n - 3)
 
+
+print(eating_cookies(5))
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
